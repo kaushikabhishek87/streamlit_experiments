@@ -1,4 +1,5 @@
 import streamlit as st
+import config
 _=""" Day 2 """
 # st.write("Hello World")
 
@@ -10,6 +11,6 @@ st.magicEnabled = False
 st.header('st.button')
 
 if st.button('Say Hello'):
-    st.write('Why hello there')
+    st.write(config.GREETING_MESSAGE)
 else:
     st.write('Goodbye for now')
