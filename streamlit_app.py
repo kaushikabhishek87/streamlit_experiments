@@ -4,7 +4,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import matplotlib_inline
 import config
 from datetime import time, datetime
 _=""" Day 2 """
