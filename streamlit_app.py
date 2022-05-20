@@ -3,6 +3,7 @@ import altair as alt
 import pandas as pd
 import numpy as np
 import config
+from datetime import time, datetime
 _=""" Day 2 """
 # st.write("Hello World")
 
@@ -18,34 +19,74 @@ _="""Day 3"""
 # else:
 #     st.write('Goodbye for now')
 
-# Exmaple 1
-st.header('st.write')
+# # Exmaple 1
+# st.header('st.write')
+#
+# # Example 2
+# st.write('Hello, *World* :sunglasses:')
+#
+# # Example 3
+# st.write(1234)
+#
+# df = pd.DataFrame({
+#     'first column': [1, 2, 3, 4],
+#     'second columns': [10, 20, 30, 40]
+# })
+#
+# st.write(df)
+#
+# # Example 4
+# st.write('Below is a dataframe:', df, 'Above is a dataframe.')
+#
+# # Example 5
+# df2 = pd.DataFrame(
+#     np.random.rand(200, 3),
+#     columns=['a','b','c']
+# )
+#
+# c = alt.Chart(df2).mark_circle().encode(
+#     x='a', y='b', size='c', color='c', tooltip=['a', 'b',  'c']
+# )
+#
+# st.write(c)
+
+st.header('Day 8')
+st.header('st.slider')
+
+# Example 1
+st.subheader('Slider')
+
+age = st.slider('How old are you?', 0, 130, 25)
+st.write("I'm", age, 'years old')
 
 # Example 2
-st.write('Hello, *World* :sunglasses:')
+st.subheader('Range slider')
+
+values = st.slider(
+    'Select a range from values',
+    0.0, 100.0, (25.0, 75.0)
+)
+st.write('values', values)
 
 # Example 3
-st.write(1234)
+st.subheader('Range time slider')
 
-df = pd.DataFrame({
-    'first column': [1, 2, 3, 4],
-    'second columns': [10, 20, 30, 40]
-})
-
-st.write(df)
+appointment = st.slider(
+    'Schedule your appointment:',
+    value=(time(11, 30), time(12, 45))
+)
+st.write("You are scheduled for:", appointment)
 
 # Example 4
-st.write('Below is a dataframe:', df, 'Above is a dataframe.')
+st.subheader('Datetime slider')
 
-# Example 5
-df2 = pd.DataFrame(
-    np.random.rand(200, 3),
-    columns=['a','b','c']
-)
+start_time = st.slider(
+    'When do you start?',
+    min_value = datetime(2022, 5, 1, 9, 20),
+    max_value = datetime(2022, 6, 30, 9, 20),
+    value=(datetime(2022, 5, 20, 9, 20), datetime(2022, 6, 20, 9, 20)),
+    format="MM/DD/YY - hh:mm")
 
-c = alt.Chart(df2).mark_circle().encode(
-    x='a', y='b', size='c', color='c', tooltip=['a', 'b',  'c']
-)
+st.write("start time:", start_time)
 
-st.write(c)
 
