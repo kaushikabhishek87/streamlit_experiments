@@ -1,11 +1,11 @@
 import streamlit as st
-import altair as alt
+# import altair as alt
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import config
-from streamlit_pandas_profiling import st_profile_report
+# from streamlit_pandas_profiling import st_profile_report
 from scipy import stats
 
 # import ssl;
