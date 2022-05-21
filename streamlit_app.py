@@ -11,8 +11,8 @@ from scipy import stats
 # import ssl;
 # ssl._create_default_https_context = ssl._create_stdlib_context
 
-import pandas_profiling
-from datetime import time, datetime
+# import pandas_profiling
+# from datetime import time, datetime
 _=""" Day 2 """
 # st.write("Hello World")
 
