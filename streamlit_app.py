@@ -164,12 +164,10 @@ _="""First app deploy"""
 ################# Monet Carlo Simulations
 st.header('Monte Carlo Simulation of Profit')
 
-st.subheader('Profit = Revenue - FC - VC')
-
 st.write("""Monte Carlo simulation of Profit when mean & std of Revenue, Fixed Cost & Variable cost is known, 
     assuming they have normal distribution.""")
 
-
+st.subheader('Profit = Revenue - FC - VC')
 
 st.write("""User can choose respective mean & std values for features.
             Final Profit KPIs are generated after 500 simulations on selected values""")
