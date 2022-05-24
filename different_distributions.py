@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 # sns.distplot(value)
 # st.write(fig)
 
-options = st.multiselect("Choose distributions", ['Normal', 'Uniform'], ['Normal'])
+options = st.multiselect("Choose distributions", ['Normal', 'Uniform', 'Triangular'], ['Normal'])
 
 for i in options:
     if i == 'Normal':
@@ -32,6 +32,13 @@ for i in options:
         st.subheader('Uniform distribution')
         fig_1 = plt.figure()
         value_1 = np.random.uniform(low=0, high=1, size=1000)
+        sns.distplot(value_1)
+        st.write(fig_1)
+
+    elif i == 'Triangular':
+        st.subheader('Triangular distribution')
+        fig_1 = plt.figure()
+        value_1 = np.random.triangular(left=29 , mode=32, right=36, size=1000)
         sns.distplot(value_1)
         st.write(fig_1)
 #
