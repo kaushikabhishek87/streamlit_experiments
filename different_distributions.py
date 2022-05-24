@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 # sns.distplot(value)
 # st.write(fig)
 
-options = st.multiselect("Choose distributions", ['Normal', 'Uniform', 'Triangular'], ['Normal'])
+options = st.multiselect("Choose distributions", ['Normal', 'Uniform', 'Triangular', 'Gamma'], ['Normal'])
 
 for i in options:
     if i == 'Normal':
@@ -39,6 +39,13 @@ for i in options:
         st.subheader('Triangular distribution')
         fig_1 = plt.figure()
         value_1 = np.random.triangular(left=29 , mode=32, right=36, size=1000)
+        sns.distplot(value_1)
+        st.write(fig_1)
+
+    elif i == 'Gamma':
+        st.subheader('Gamma distribution')
+        fig_1 = plt.figure()
+        value_1 = np.random.gamma(shape=2, scale=0.67, size=1000)
         sns.distplot(value_1)
         st.write(fig_1)
 #
