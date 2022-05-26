@@ -179,14 +179,14 @@ st.write("""User can choose respective mean & std values for features.
 # fc_std = 4000
 # vc_std = 40000
 
-rv_mean = st.slider('Revenue Mean', min_value=100000, max_value=200000, value=194500)
-rv_std = st.slider('Revenue STD', min_value=10000, max_value=20000, value=15000)
+rv_mean = st.sidebar.slider('Revenue Mean', min_value=100000, max_value=200000, value=194500)
+rv_std = st.sidebar.slider('Revenue STD', min_value=10000, max_value=20000, value=15000)
 
-fc_mean = st.slider('Fixed Cost Mean', min_value=10000, max_value=100000, value=60000)
-fc_std = st.slider('Fixed Cost STD', min_value=1000, max_value=8000, value=4000)
+fc_mean = st.sidebar.slider('Fixed Cost Mean', min_value=10000, max_value=100000, value=60000)
+fc_std = st.sidebar.slider('Fixed Cost STD', min_value=1000, max_value=8000, value=4000)
 
-vc_mean = st.slider('Revenue Mean', min_value=10000, max_value=70000, value=40000)
-vc_std = st.slider('Revenue STD', min_value=20000, max_value=60000, value=40000)
+vc_mean = st.sidebar.slider('Revenue Mean', min_value=10000, max_value=70000, value=40000)
+vc_std = st.sidebar.slider('Revenue STD', min_value=20000, max_value=60000, value=40000)
 
 rv_col = stats.norm.rvs(rv_mean, rv_std, 500)
 fc_col = stats.norm.rvs(fc_mean, fc_std, 500)
